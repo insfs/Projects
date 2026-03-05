@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minesweeper</title>
+
+
+    <link rel="stylesheet" href="minesweeper.css" />
+    <script src="minesweeper.js" defer></script>
+</head>
+
+<body>
+
+    <div class="flex items-center gap-4 p-4 bg-base-100 rounded-box">
+
+        <!-- Page Container -->
+        <div class="page">
+
+            <!-- Header -->
+            <header class="header">
+                <h1>Minesweeper</h1>
+            </header>
+
+            <!-- Main Layout -->
+            <main class="layout">
+
+                <!-- Game Board -->
+                <section class="board-wrap">
+                    <div id="board"></div>
+                </section>
+
+                <!-- Side Panel -->
+                <aside class="side-panel">
+
+                    <!-- Stats -->
+                    <section class="stats">
+                        <label class="stats-label">Stats</label>
+
+                        <div class="stat-box">
+                            <span class="label">Mines</span>
+                            <span id="mines-count" class="value">0</span>
+                        </div>
+
+                        <div class="stat-box">
+                            <span class="label">Safe Tiles</span>
+                            <span id="safe-count" class="value">0</span>
+                        </div>
+
+                        <div class="stat-box">
+                            <span class="label">Total Tiles</span>
+                            <span id="total-count" class="value">0</span>
+                        </div>
+
+                        <div class="stat-box">
+                            <span class="label">Remaining</span>
+                            <span id="remaining-count" class="value">0</span>
+                        </div>
+                    </section>
+
+                    <!-- Difficulty -->
+                    <section class="controls">
+                        <label class="difficulty-label">Difficulty</label>
+
+                        <div class="difficulty-dropdown" id="difficultyDropdown">
+                            <div class="difficulty-selected" id="difficultySelected">Medium</div>
+
+                            <ul class="difficulty-options" id="difficultyOptions">
+                                <li data-value="easy">Easy</li>
+                                <li data-value="medium">Medium</li>
+                                <li data-value="hard">Hard</li>
+                            </ul>
+                        </div>
+
+                        <button onclick="applyDifficulty()">Start Game</button>
+                    </section>
+
+                </aside>
+            </main>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
